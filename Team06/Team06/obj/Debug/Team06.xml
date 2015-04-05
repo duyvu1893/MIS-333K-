@@ -6,7 +6,63 @@ Team06
 </name>
 </assembly>
 <members>
-<member name="F:Team06.MyAccount.btnModify">
+<member name="F:Team06.ChangePassword.btnSavePassword">
+	<summary>
+btnSavePassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.ChangePassword.btnCanclePassword">
+	<summary>
+btnCanclePassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.ChangePassword.txtCurrentPassword">
+	<summary>
+txtCurrentPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.ChangePassword.txtNewPassword">
+	<summary>
+txtNewPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.ChangePassword.txtPasswordAgain">
+	<summary>
+txtPasswordAgain control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchMusic.txtLastname">
+	<summary>
+txtLastname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchMusic.radSong">
+	<summary>
+radSong control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.MyAccount.btnModify">
 	<summary>
 btnModify control.
 </summary>
@@ -62,14 +118,6 @@ txtEmail control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.MyAccount.txtPassword">
-	<summary>
-txtPassword control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
 </member><member name="F:Team06.MyAccount.txtPhone">
 	<summary>
 txtPhone control.
@@ -110,22 +158,31 @@ txtZipCode control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchMusic.txtLastname">
+</member><member name="P:Team06.My.MyWebExtension.Computer">
 	<summary>
-txtLastname control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Team06.SearchMusic.radSong">
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.User">
 	<summary>
-radSong control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:Team06.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
 </member><member name="F:Team06.Login.txtEmail">
 	<summary>
 txtEmail control.
@@ -182,31 +239,6 @@ ContentPlaceHolder1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="P:Team06.My.MyWebExtension.Computer">
-	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="T:Team06.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
 </member>
 </members>
 </doc>

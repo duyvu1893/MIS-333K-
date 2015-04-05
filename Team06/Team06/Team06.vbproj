@@ -149,6 +149,7 @@
     <Content Include="bootstrap.min.css" />
     <Content Include="bootstrap.min.js" />
     <Content Include="CAMlogo.jpeg" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="FP_Chloe.vbproj" />
     <Content Include="FP_Chloe.vbproj.user" />
     <Content Include="Index.aspx" />
@@ -156,10 +157,19 @@
     <Content Include="Login.aspx" />
     <Content Include="Maroon-5-Sugar.jpg" />
     <Content Include="MyAccount.aspx" />
+    <Content Include="MyMusic.aspx" />
+    <Content Include="OrderHistory.aspx" />
     <Content Include="SearchMusic.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
@@ -206,6 +216,20 @@
     <Compile Include="MyAccount.aspx.vb">
       <DependentUpon>MyAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyMusic.aspx.designer.vb">
+      <DependentUpon>MyMusic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyMusic.aspx.vb">
+      <DependentUpon>MyMusic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.vb">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.vb">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SearchMusic.aspx.designer.vb">
       <DependentUpon>SearchMusic.aspx</DependentUpon>
