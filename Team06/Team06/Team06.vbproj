@@ -155,6 +155,7 @@
     <Content Include="Index.aspx" />
     <Content Include="jquery-2.1.3.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="LoginEmp.aspx" />
     <Content Include="Maroon-5-Sugar.jpg" />
     <Content Include="MyAccount.aspx" />
     <Content Include="MyMusic.aspx" />
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginEmp.aspx.designer.vb">
+      <DependentUpon>LoginEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginEmp.aspx.vb">
+      <DependentUpon>LoginEmp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LonghornMusic.Master.designer.vb">

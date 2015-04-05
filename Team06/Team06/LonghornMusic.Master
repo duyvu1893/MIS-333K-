@@ -52,7 +52,7 @@
                                 <li role="presentation" class="dropdown-header">Sign In As</li>
                                 <li class="divider"></li>
                                 <li><a href="login.aspx">Customer</a></li>
-                                <li><a href="#">Employee</a></li>
+                                <li><a href="loginemp.aspx#">Employee</a></li>
                             </ul>
                         </li>
                     </ul>
