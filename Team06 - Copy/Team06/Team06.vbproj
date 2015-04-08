@@ -166,7 +166,6 @@
     <Content Include="OrderHistory.aspx" />
     <Content Include="SearchAlbum.aspx" />
     <Content Include="SearchArtist.aspx" />
-    <Content Include="SearchMusic.aspx" />
     <Content Include="SearchSong.aspx" />
     <Content Include="Images\UT Longhorn music logo-06.jpg" />
     <Content Include="Style\global.css" />
@@ -286,13 +285,6 @@
     </Compile>
     <Compile Include="SearchArtist.aspx.vb">
       <DependentUpon>SearchArtist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SearchMusic.aspx.designer.vb">
-      <DependentUpon>SearchMusic.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SearchMusic.aspx.vb">
-      <DependentUpon>SearchMusic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SearchSong.aspx.designer.vb">
