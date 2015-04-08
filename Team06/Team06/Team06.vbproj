@@ -152,6 +152,7 @@
   <ItemGroup>
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="PaymentInfo.aspx" />
+    <Content Include="SignUp.aspx" />
     <Content Include="Style\bootstrap.min.css" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Images\CAMlogo.jpeg" />
@@ -293,6 +294,13 @@
     <Compile Include="SearchSong.aspx.vb">
       <DependentUpon>SearchSong.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
