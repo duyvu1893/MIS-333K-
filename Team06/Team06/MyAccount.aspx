@@ -99,6 +99,12 @@
                             <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
                         </div>
                     </div>
+                      <div class="form-group">
+                        <label class="col-sm-2" style="text-align: right">Credit Card</label>
+                        <div class="col-sm-6">
+                            <a href="ChangePassword.aspx">Change password?</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

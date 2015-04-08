@@ -17,6 +17,8 @@ Public Class ClassCustomersDB
     Dim mdbConn As SqlConnection
     Dim mMyView As New DataView
     Dim mstrConnection As String = "workstation id=COMPUTER;packet size=4096;data source=missql.mccombs.utexas.edu;integrated security=False;initial catalog=mis333k_20152_team06;user id=msbcr885;password=MISsqlpas789"
+    Dim maryParamNames As New ArrayList
+    Dim maryParamValues As New ArrayList
 
     Dim valid As New ClassValidation
 
@@ -35,58 +37,51 @@ Public Class ClassCustomersDB
         End Get
     End Property
 
-    ' define a public sub that will handle running any select query
-    ' in class I had this as private, but said you might want to make it public, so you 
-    ' could just send it any query and have it run it.  This avoids having more subs for 
-    ' each type of query you want to run.
+    Protected Sub UseSP(strUSPName As String, strDatasetName As DataSet, strViewName As DataView, strTableName As String, aryParamNames As ArrayList, aryParamValues As ArrayList)
+        'Purpose: Run any stored procedure with any number of parameters
+        'Arguments: Stored procedure name, tblName, dataset name, dataview name, arraylist of parameter names, and array list of parameter values\
+        'Returns: Nothing
+        'Author: Xiaoru Chen
+        'Date: 3/22/2015
 
-    Public Sub RunProcedure(ByVal strName As String)
-        ' CREATES INSTANCES OF THE CONNECTION AND COMMAND OBJECT
+        'Create instances of the connection and command object
         Dim objConnection As New SqlConnection(mstrConnection)
-        ' Tell SQL server the name of the stored procedure you will be executing
-        Dim mdbDataAdapter As New SqlDataAdapter(strName, objConnection)
+
+
+        'Tell SQL server the name of the stored procedure
+        Dim mdbDataAdapter As New SqlDataAdapter(strUSPName, objConnection)
+
         Try
-            ' SETS THE COMMAND TYPE TO "STORED PROCEDURE"
-            mdbDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure
-            ' clear dataset
-            Me.mDatasetCustomer.Clear()
-            ' OPEN CONNECTION AND FILL DATASET
-            mdbDataAdapter.Fill(mDatasetCustomer, "tblCustomers")
-            ' copy dataset to dataview
-            mMyView.Table = mDatasetCustomer.Tables("tblCustomers")
-        Catch ex As Exception
-            Throw New Exception("stored procedure is " & strName.ToString & " error is " & ex.Message)
-        End Try
-    End Sub
-
-
-    Public Sub RunSPwithOneParam(ByVal strSPName As String, ByVal strParamName As String, ByVal strParamValue As String)
-        ' purpose to run a stored procedure with one parameter
-        ' inputs:  stored procedure name, parameter name, parameter value
-        ' returns: dataset filled with correct records
-
-        ' CREATES INSTANCES OF THE CONNECTION AND COMMAND OBJECT
-        Dim objConnection As New SqlConnection(mstrConnection)
-        ' Tell SQL server the name of the stored procedure you will be executing
-        Dim mdbDataAdapter As New SqlDataAdapter(strSPName, objConnection)
-        Try
-            ' SETS THE COMMAND TYPE TO "STORED PROCEDURE"
+            'set the command type to stored procedure
             mdbDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure
 
-            ' ADD PARAMETER(S) TO SPROC
-            mdbDataAdapter.SelectCommand.Parameters.Add(New SqlParameter(strParamName, strParamValue))
-            ' clear dataset
-            Me.mDatasetCustomer.Clear()
+            'Add Parameters to stored procedure
+            Dim index As Integer = 0
+            For Each paramName As String In aryParamNames
+                mdbDataAdapter.SelectCommand.Parameters.Add(New SqlParameter(CStr(aryParamNames(index)), CStr(aryParamValues(index))))
+                index = index + 1
+            Next
 
-            ' OPEN CONNECTION AND FILL DATASET
-            mdbDataAdapter.Fill(mDatasetCustomer, "tblCustomers")
+            'clear dataset
+            strDatasetName.Clear()
 
-            ' copy dataset to dataview
-            mMyView.Table = mDatasetCustomer.Tables("tblCustomers")
+            'open the connection and fill dataset
+            mdbDataAdapter.Fill(strDatasetName, strTableName)
 
+            'fill view
+            strViewName.Table = strDatasetName.Tables(strTableName)
+
+            'print out each element of out arraylists if error occured
         Catch ex As Exception
-            Throw New Exception("params are " & strSPName.ToString & " " & strParamName.ToString & " " & strParamValue.ToString & " error is " & ex.Message)
+            Dim strError As String = ""
+            Dim index As Integer = 0
+            For Each paramName As String In aryParamNames
+                strError = strError & "ParamName: " & CStr(aryParamNames(index))
+                strError = strError & "ParamValue: " & CStr(aryParamValues(index))
+            Next
+            Throw New Exception(strError & "error message is " & ex.Message)
         End Try
+
     End Sub
 
     Public Sub GetAllCustomers()
@@ -95,8 +90,12 @@ Public Class ClassCustomersDB
         ' outputs: none directly, but it opens and fills the dataset
         '          with all the records in tblCustomers
 
+        'clear arrays
+        maryParamNames.Clear()
+        maryParamValues.Clear()
+
         'run usp to get all customers
-        RunProcedure("usp_customers_get_all")
+        UseSP("usp_customers_get_all", mDatasetCustomer, mMyView, "tblCustomer", maryParamNames, maryParamValues)
     End Sub
 
     Public Sub GetCustomerWithEmail(strIn As String)
@@ -106,8 +105,17 @@ Public Class ClassCustomersDB
         ' author: Tien Bui
         ' date: 02-06-2015
 
+        'clear arrays
+        maryParamNames.Clear()
+        maryParamValues.Clear()
+
+        'set array value
+        maryParamNames.Add("@email")
+        maryParamValues.Add(strIn)
+
         ' to get one Employee using sp
-        RunSPwithOneParam("usp_customers_get_customers_by_email", "email", strIn)
+        'RunSPwithOneParam(, "email", strIn)
+        UseSP("usp_customers_get_customers_by_email", mDatasetCustomer, mMyView, "tblCustomer", maryParamNames, maryParamValues)
     End Sub
 
     Public Sub GetCustomerWithID(intID As Integer)
@@ -117,8 +125,17 @@ Public Class ClassCustomersDB
         ' author: Tien Bui
         ' date: 02-06-2015
 
+        'clear arrays
+        maryParamNames.Clear()
+        maryParamValues.Clear()
+
+        'set array value
+        maryParamNames.Add("ID")
+        maryParamValues.Add(intID)
+
         ' to get one Employee using sp
-        RunSPwithOneParam("usp_customers_get_customers_by_ID", "ID", intID.ToString)
+        'RunSPwithOneParam(, "email", strIn)
+        UseSP("usp_customers_get_customers_by_id", mDatasetCustomer, mMyView, "tblCustomers", maryParamNames, maryParamValues)
     End Sub
 
     Public Function CheckCustomerLogin(strEmail As String, strPassword As String) As Boolean
@@ -138,7 +155,7 @@ Public Class ClassCustomersDB
         End If
 
         'check password
-        If mDatasetCustomer.Tables("tblCustomers").Rows(0).Item("Password") <> strPassword Then
+        If mDatasetCustomer.Tables("tblCustomers").Rows(0).Item("Password").ToString <> strPassword Then
             'if not match, return false
             Return False
         End If
@@ -420,67 +437,5 @@ Public Class ClassCustomersDB
     '    UpdateDB(strQueryString)
     'End Sub
 
-
-
-
-
-    Dim mstrConnection As String = "workstation id=COMPUTER; packet size=4096; data source=MISSQL.mccombs.utexas.edu; integrated security = False; initial catalog = mis333k_msbcm684; user id = msbcm684; password=Yongying0519."
-    Dim myView As New DataView
-    Dim mDSAllCustomers As New DataSet
-    Dim aryNames As New ArrayList
-    Dim aryValues As New ArrayList
-
-    ' define a public read only property for the outside world to access the dataset filled by this class
-    Public ReadOnly Property DataViews() As DataView
-        Get
-            ' return dataset to user
-            Return myView
-        End Get
-    End Property
-    Protected Sub UseSP(strUSPName As String, strDatasetName As DataSet, strViewName As DataView, strTableName As String, aryParamNames As ArrayList, aryParamValues As ArrayList)
-        'Purpose: Run any stored procedure with any number of parameters
-        'Arguments: Stored procedure name, tblName, dataset name, dataview name, arraylist of parameter names, and array list of parameter values\
-        'Returns: Nothing
-        'Author: Xiaoru Chen
-        'Date: 3/22/2015
-
-        'Create instances of the connection and command object
-        Dim objConnection As New SqlConnection(mstrConnection)
-
-
-        'Tell SQL server the name of the stored procedure
-        Dim mdbDataAdapter As New SqlDataAdapter(strUSPName, objConnection)
-
-        Try
-            'set the command type to stored procedure
-            mdbDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure
-
-            'Add Parameters to stored procedure
-            Dim index As Integer = 0
-            For Each paramName As String In aryParamNames
-                mdbDataAdapter.SelectCommand.Parameters.Add(New SqlParameter(CStr(aryParamNames(index)), CStr(aryParamValues(index))))
-                index = index + 1
-            Next
-
-            'clear dataset
-            strDatasetName.Clear()
-
-            'open the connection and fill dataset
-            mdbDataAdapter.Fill(strDatasetName, strTableName)
-
-            'fill view
-            strViewName.Table = strDatasetName.Tables(strTableName)
-
-            'print out each element of out arraylists if error occured
-        Catch ex As Exception
-            Dim strError As String = ""
-            Dim index As Integer = 0
-            For Each paramName As String In aryParamNames
-                strError = strError & "ParamName: " & CStr(aryParamNames(index))
-                strError = strError & "ParamValue: " & CStr(aryParamValues(index))
-            Next
-            Throw New Exception(strError & "error message is " & ex.Message)
-        End Try
-
-    End Sub
+    
 End Class
