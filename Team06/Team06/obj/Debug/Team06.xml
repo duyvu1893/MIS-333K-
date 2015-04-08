@@ -6,7 +6,55 @@ Team06
 </name>
 </assembly>
 <members>
-<member name="F:Team06.SearchMusic.txtLastname">
+<member name="F:Team06.SearchSong.txtTitle">
+	<summary>
+txtTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.txtGenre">
+	<summary>
+txtGenre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.txtArtist">
+	<summary>
+txtArtist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.TxtAlbum">
+	<summary>
+TxtAlbum control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.DropDownList1">
+	<summary>
+DropDownList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.RadioButtonList1">
+	<summary>
+RadioButtonList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchMusic.txtLastname">
 	<summary>
 txtLastname control.
 </summary>

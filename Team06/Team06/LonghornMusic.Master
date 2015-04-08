@@ -152,9 +152,9 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation" class="dropdown-header">Search By</li>
                                 <li class="divider"></li>
-                                <li><a href="#">Song</a></li>
-                                <li><a href="#">Album</a></li>
-                                <li><a href="#">Artist</a></li>
+                                <li><a href="SearchSong.aspx">Song</a></li>
+                                <li><a href="SearchAlbum.aspx">Album</a></li>
+                                <li><a href="SearchArtist">Artist</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

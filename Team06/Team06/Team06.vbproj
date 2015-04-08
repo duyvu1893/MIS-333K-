@@ -160,8 +160,10 @@
     <Content Include="MyAccount.aspx" />
     <Content Include="MyMusic.aspx" />
     <Content Include="OrderHistory.aspx" />
+    <Content Include="SearchAlbum.aspx" />
+    <Content Include="SearchArtist.aspx" />
     <Content Include="SearchMusic.aspx" />
-    <Content Include="SearchSongs.aspx" />
+    <Content Include="SearchSong.aspx" />
     <Content Include="UT Longhorn music logo-06.jpg" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -243,6 +245,20 @@
       <DependentUpon>OrderHistory.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="SearchAlbum.aspx.designer.vb">
+      <DependentUpon>SearchAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAlbum.aspx.vb">
+      <DependentUpon>SearchAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SearchArtist.aspx.designer.vb">
+      <DependentUpon>SearchArtist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchArtist.aspx.vb">
+      <DependentUpon>SearchArtist.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="SearchMusic.aspx.designer.vb">
       <DependentUpon>SearchMusic.aspx</DependentUpon>
     </Compile>
@@ -250,11 +266,11 @@
       <DependentUpon>SearchMusic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchSongs.aspx.designer.vb">
-      <DependentUpon>SearchSongs.aspx</DependentUpon>
+    <Compile Include="SearchSong.aspx.designer.vb">
+      <DependentUpon>SearchSong.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SearchSongs.aspx.vb">
-      <DependentUpon>SearchSongs.aspx</DependentUpon>
+    <Compile Include="SearchSong.aspx.vb">
+      <DependentUpon>SearchSong.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="WebForm1.aspx.designer.vb">

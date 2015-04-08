@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class SearchSongs
+Partial Public Class SearchArtist
 End Class
