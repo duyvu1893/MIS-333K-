@@ -49,7 +49,7 @@
                             <asp:TextBox ID="txtNewPassword" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label>Enter Password Again</label>
+                        <label>Confirm New Password</label>
                             <asp:TextBox ID="txtPasswordAgain" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
                     </div>
                     <div class="form-group">

@@ -161,7 +161,10 @@
     <Content Include="MyMusic.aspx" />
     <Content Include="OrderHistory.aspx" />
     <Content Include="SearchMusic.aspx" />
+    <Content Include="SearchSongs.aspx" />
+    <Content Include="UT Longhorn music logo-06.jpg" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChangePassword.aspx.designer.vb">
@@ -171,6 +174,7 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Class1.vb" />
     <Compile Include="Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
@@ -245,6 +249,20 @@
     <Compile Include="SearchMusic.aspx.vb">
       <DependentUpon>SearchMusic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchSongs.aspx.designer.vb">
+      <DependentUpon>SearchSongs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSongs.aspx.vb">
+      <DependentUpon>SearchSongs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
