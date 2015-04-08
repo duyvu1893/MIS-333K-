@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="Maroon-5-Sugar.jpg" class="img-rounded" style="width: 200px"  alt="..." />
+                    <img src="Images/Maroon-5-Sugar.jpg" class="img-rounded" style="width: 200px"  alt="..." />
                 <div class="caption">
               <h3>SONG NAME</h3>
            <p>...</p>

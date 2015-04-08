@@ -4,41 +4,44 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <nav class="navbar navbar-primary">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-pills navbar-nav navbar-right">
-                        <li class="active"><a href="MyAccount.aspx">Portfolio</a></li>
-                        <li><a href="ChangePassword.aspx">Change Password</a></li>
-                        <li><a href="MyMusic.aspx">My Music</a></li>
-                        <li><a href="OrderHistory.aspx">Order History</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav-pills navbar-nav navbar-right">
+                    <li class="active"><a href="MyAccount.aspx">Portfolio</a></li>
+                    <li><a href="ChangePassword.aspx">Change Password</a></li>
+                    <li><a href="MyMusic.aspx">My Music</a></li>
+                    <li><a href="OrderHistory.aspx">Order History</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div class="container">
         <div class="page-header">
-            <h1>My Account<small>See my info</small></h1>
+            <h1>My Account<small> See my info</small></h1>
         </div>
         <div class="row">
             <div class="col-xs-6 col-md-4">
-                <asp:Button ID="btnModify" runat="server" Text="Modify My Account" CssClass="btn btn-primary" OnClick="btnModify_Click" /><br />
+                <asp:Button ID="btnModify" runat="server" Text="Modify My Account" CssClass="btn btn-primary" />
                 <br />
-                <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" Enabled="false" OnClick="btnSave_Click" />
-                <asp:Button ID="btnAbort" runat="server" Text="Abort" CssClass="btn btn-primary" Enabled="false" OnClick="btnAbort_Click" />
-                <asp:Button ID="btnCancle" runat="server" Text="Cancle" CssClass="btn btn-primary" Enabled="false" OnClick="btnCancle_Click" />
+                <br />
+                <asp:Panel ID="pnlModify" runat="server">
+                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" Enabled="true" />
+                    <asp:Button ID="btnAbort" runat="server" Text="Abort" CssClass="btn btn-primary" Enabled="true" />
+                    <asp:Button ID="btnCancle" runat="server" Text="Cancel" CssClass="btn btn-primary" Enabled="true" />
+                </asp:Panel>
             </div>
             <div class="col-xs-18 col-md-8">
                 <div id="login" class="form-horizontal">
@@ -81,13 +84,13 @@
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">City</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="TxtCity" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="TxtCity" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">State</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtState" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtState" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">

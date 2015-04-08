@@ -6,13 +6,13 @@
 <head runat="server">
     <title>Longhorn Music</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <script src="jquery-2.1.3.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <link href="bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Style/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
+    <%--<style type="text/css">
         /*.navbar-custom {
             color:  #BF5700  ;
             background-color:  white  ;
@@ -113,7 +113,7 @@
         .nav-pills > .active > a, .nav-pills > .active > a:hover {
             background-color: red;
         }
-    </style>
+    </style>--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -121,7 +121,7 @@
             <div class="cl-md-12">
 
                 <a class="navbar-brand" href="#">
-                    <img src="UT Longhorn music logo-06.jpg" class="img-circle" style="width: 300px" />
+                    <img src="Images/UT Longhorn music logo-06.jpg" class="img-circle" style="width: 300px" />
                 </a>
             </div>
         </div>
@@ -154,7 +154,7 @@
                                 <li class="divider"></li>
                                 <li><a href="SearchSong.aspx">Song</a></li>
                                 <li><a href="SearchAlbum.aspx">Album</a></li>
-                                <li><a href="SearchArtist">Artist</a></li>
+                                <li><a href="SearchArtist.aspx">Artist</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

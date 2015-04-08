@@ -2,16 +2,23 @@
 Public Class Login
     Inherits System.Web.UI.Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-    End Sub
-
+    'define customer db class
+    Dim db As New ClassCustomersDB
 
     Protected Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        'clear error
+        lblError.Text = ""
 
-    End Sub
+        'if login is incorrect
+        If db.CheckCustomerLogin(txtEmail.Text, txtPassword.Text) = False Then
+            'display error
+            lblError.Text = "Login failed, please try again!"
+        End If
 
-    Protected Sub txtCreateCustomer_Click(sender As Object, e As EventArgs) Handles txtCreateCustomer.Click
+        'set session variable
+        Session("CustID") = db.CustDataset.Tables("tblCustomers").Rows(0).Item("Account")
+
+        'redirect back to the page customer was on
 
     End Sub
 End Class

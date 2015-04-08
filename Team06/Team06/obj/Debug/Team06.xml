@@ -6,65 +6,97 @@ Team06
 </name>
 </assembly>
 <members>
-<member name="F:Team06.SearchMusic.txtLastname">
+<member name="F:Team06.WebForm1.lblCreditCardEnding1">
 	<summary>
-txtLastname control.
+lblCreditCardEnding1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchMusic.radSong">
+</member><member name="F:Team06.WebForm1.lblCreditCardExpires1">
 	<summary>
-radSong control.
+lblCreditCardExpires1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchSong.txtTitle">
+</member><member name="F:Team06.WebForm1.Label1">
 	<summary>
-txtTitle control.
+Label1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchSong.txtGenre">
+</member><member name="F:Team06.WebForm1.lblCreditCardContent1">
 	<summary>
-txtGenre control.
+lblCreditCardContent1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchSong.txtArtist">
+</member><member name="F:Team06.WebForm1.btnDelete1">
 	<summary>
-txtArtist control.
+btnDelete1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchSong.TxtAlbum">
+</member><member name="F:Team06.WebForm1.btnEdit1">
 	<summary>
-TxtAlbum control.
+btnEdit1 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchSong.DropDownList1">
+</member><member name="F:Team06.WebForm1.lblCreditCardEnding2">
 	<summary>
-DropDownList1 control.
+lblCreditCardEnding2 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.SearchSong.RadioButtonList1">
+</member><member name="F:Team06.WebForm1.lblCreditCardExpires2">
 	<summary>
-RadioButtonList1 control.
+lblCreditCardExpires2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.WebForm1.Label2">
+	<summary>
+Label2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.WebForm1.lblCreditCardContent2">
+	<summary>
+lblCreditCardContent2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.WebForm1.btnDelete2">
+	<summary>
+btnDelete2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.WebForm1.btnEdit2">
+	<summary>
+btnEdit2 control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -73,6 +105,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:Team06.MyAccount.btnModify">
 	<summary>
 btnModify control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.MyAccount.pnlModify">
+	<summary>
+pnlModify control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -166,6 +206,94 @@ txtZipCode control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:Team06.SearchMusic.txtLastname">
+	<summary>
+txtLastname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchMusic.radSong">
+	<summary>
+radSong control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.LonghornMusic.head">
+	<summary>
+head control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.LonghornMusic.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.LonghornMusic.ContentPlaceHolder1">
+	<summary>
+ContentPlaceHolder1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.txtTitle">
+	<summary>
+txtTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.txtGenre">
+	<summary>
+txtGenre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.txtArtist">
+	<summary>
+txtArtist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.TxtAlbum">
+	<summary>
+TxtAlbum control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.DropDownList1">
+	<summary>
+DropDownList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Team06.SearchSong.RadioButtonList1">
+	<summary>
+RadioButtonList1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:Team06.LoginEmp.txtEmail">
 	<summary>
 txtEmail control.
@@ -190,31 +318,6 @@ btnLogin control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="P:Team06.My.MyWebExtension.Computer">
-	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:Team06.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="T:Team06.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
 </member><member name="F:Team06.ChangePassword.btnSavePassword">
 	<summary>
 btnSavePassword control.
@@ -279,6 +382,14 @@ btnLogin control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:Team06.Login.lblError">
+	<summary>
+lblError control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:Team06.Login.txtCreateCustomer">
 	<summary>
 txtCreateCustomer control.
@@ -287,30 +398,31 @@ txtCreateCustomer control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Team06.LonghornMusic.head">
+</member><member name="P:Team06.My.MyWebExtension.Computer">
 	<summary>
-head control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Team06.LonghornMusic.form1">
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.User">
 	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:Team06.LonghornMusic.ContentPlaceHolder1">
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.Request">
 	<summary>
-ContentPlaceHolder1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
+ Returns Request object.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:Team06.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:Team06.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

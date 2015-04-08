@@ -23,6 +23,15 @@ Partial Public Class MyAccount
     Protected WithEvents btnModify As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''pnlModify control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pnlModify As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''btnSave control.
     '''</summary>
     '''<remarks>

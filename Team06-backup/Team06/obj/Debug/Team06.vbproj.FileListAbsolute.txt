@@ -1,0 +1,32 @@
+F:\MIS 333K\Team06\Team06\bin\Team06.dll
+F:\MIS 333K\Team06\Team06\bin\Team06.pdb
+F:\MIS 333K\Team06\Team06\bin\Team06.xml
+F:\MIS 333K\Team06\Team06\bin\Microsoft.Web.Infrastructure.dll
+F:\MIS 333K\Team06\Team06\bin\Microsoft.Web.Infrastructure.xml
+F:\MIS 333K\Team06\Team06\obj\Debug\Team06.vbprojResolveAssemblyReference.cache
+F:\MIS 333K\Team06\Team06\obj\Debug\Team06.Resources.resources
+F:\MIS 333K\Team06\Team06\obj\Debug\Team06.vbproj.GenerateResource.Cache
+F:\MIS 333K\Team06\Team06\obj\Debug\Team06.dll
+F:\MIS 333K\Team06\Team06\obj\Debug\Team06.xml
+F:\MIS 333K\Team06\Team06\obj\Debug\Team06.pdb
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\bin\Team06.dll
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\bin\Team06.pdb
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\bin\Team06.xml
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\obj\Debug\Team06.vbprojResolveAssemblyReference.cache
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\obj\Debug\Team06.Resources.resources
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\obj\Debug\Team06.vbproj.GenerateResource.Cache
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\obj\Debug\Team06.dll
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\obj\Debug\Team06.xml
+C:\Users\Chloe\Desktop\333K_Project\Team06\Team06\obj\Debug\Team06.pdb
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\bin\Team06.dll
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\bin\Team06.pdb
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\bin\Team06.xml
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\obj\Debug\Team06.Resources.resources
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\obj\Debug\Team06.vbproj.GenerateResource.Cache
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\obj\Debug\Team06.dll
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\obj\Debug\Team06.xml
+C:\Users\Tn\Desktop\MIS-333K\Team06\Team06\obj\Debug\Team06.pdb

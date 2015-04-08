@@ -42,8 +42,7 @@
 
             </div>
             <div class="form-group">
-                <label for="lblPassword">Password</label>
-                <%--<input type="password" class="form-control" id="txtPassword" placeholder="Password" />--%>
+                <label for="lblPassword">Password</label>                <%--<input type="password" class="form-control" id="txtPassword" placeholder="Password" />--%>
 
                 <br />
                 <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
@@ -51,15 +50,17 @@
             </div>
             <%--<button type="submit" class="btn btn-primary" id="btnLogin">Log in</button>--%>
 
-            <asp:Button ID="btnLogin" runat="server" Text="Log in" CssClass="btn btn-primary" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnLogin" runat="server" Text="Log in" CssClass="btn btn-primary" />
 
 
             <br />
+            <br />
+            <asp:Label ID="lblError" runat="server" ForeColor="#FF5050"></asp:Label>
             <br />
             <br />
             <p>Don't have an account?</p>
             <%--<button type="submit" class="btn btn-info" id="btnCreateAccount">Create An Account Now</button>--%>
-            <asp:Button ID="txtCreateCustomer" runat="server" Text="Create An Account Now" CssClass="btn btn-info" OnClick="txtCreateCustomer_Click" />
+            <asp:Button ID="txtCreateCustomer" runat="server" Text="Create An Account Now" CssClass="btn btn-info"/>
         </div>
     </div>
 
