@@ -17,7 +17,7 @@
                 <%--<input type="email" class="form-control" id="txtEmail" placeholder="Enter email" />--%>
 
                 <br />
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter Email"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
 
             </div>
             <div class="form-group">
@@ -25,7 +25,7 @@
                 <%--<input type="password" class="form-control" id="txtPassword" placeholder="Password" />--%>
 
                 <br />
-                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" ></asp:TextBox>
 
             </div>
             <%--<button type="submit" class="btn btn-primary" id="btnLogin">Log in</button>--%>

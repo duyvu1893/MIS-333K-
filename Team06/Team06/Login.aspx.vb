@@ -21,4 +21,8 @@ Public Class Login
         'redirect back to the page customer was on
 
     End Sub
+
+    Protected Sub txtCreateCustomer_Click(sender As Object, e As EventArgs) Handles txtCreateCustomer.Click
+        Response.Redirect("SignUp.aspx")
+    End Sub
 End Class

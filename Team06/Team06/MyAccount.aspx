@@ -33,7 +33,7 @@
             <h1>My Account<small> See my info</small></h1>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-md-4">
+            <div class="col-xs-6 col-md-3">
                 <asp:Button ID="btnModify" runat="server" Text="Modify My Account" CssClass="btn btn-primary" />
                 <br />
                 <br />
@@ -43,7 +43,7 @@
                     <asp:Button ID="btnCancle" runat="server" Text="Cancel" CssClass="btn btn-primary" Enabled="true" />
                 </asp:Panel>
             </div>
-            <div class="col-xs-18 col-md-8">
+            <div class="col-xs-18 col-md-9">
                 <div id="login" class="form-horizontal">
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Lastname</label>

@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class SearchSong
 
     '''<summary>
+    '''cblGenre control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cblGenre As Global.System.Web.UI.WebControls.CheckBoxList
+
+    '''<summary>
     '''txtTitle control.
     '''</summary>
     '''<remarks>
@@ -23,13 +32,13 @@ Partial Public Class SearchSong
     Protected WithEvents txtTitle As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtGenre control.
+    '''radTitle control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtGenre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents radTitle As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
     '''txtArtist control.
@@ -41,6 +50,15 @@ Partial Public Class SearchSong
     Protected WithEvents txtArtist As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''radArtist control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents radArtist As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
     '''TxtAlbum control.
     '''</summary>
     '''<remarks>
@@ -50,20 +68,92 @@ Partial Public Class SearchSong
     Protected WithEvents TxtAlbum As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''DropDownList1 control.
+    '''radAlbum control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents radAlbum As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
-    '''RadioButtonList1 control.
+    '''radRating control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents radRating As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''ddlRating control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlRating As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''radSort control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents radSort As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''radSortAD control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents radSortAD As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''btnSearch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnReset control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnReset As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblError control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblReordsCount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblReordsCount As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''gvSongsResult control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gvSongsResult As Global.System.Web.UI.WebControls.GridView
 End Class

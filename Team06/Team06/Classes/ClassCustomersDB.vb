@@ -437,5 +437,5 @@ Public Class ClassCustomersDB
     '    UpdateDB(strQueryString)
     'End Sub
 
-    
+
 End Class

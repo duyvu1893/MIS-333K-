@@ -29,7 +29,7 @@
         </nav>
     <div class="container">
         <div class="page-header">
-            <h1>My Account<small>See my info</small></h1>
+            <h1>Change Password<small> Here</small></h1>
         </div>
         <div class="row">
             <div class="col-xs-6 col-md-4">

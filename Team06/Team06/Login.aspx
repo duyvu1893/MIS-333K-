@@ -38,7 +38,7 @@
                 <%--<input type="email" class="form-control" id="txtEmail" placeholder="Enter email" />--%>
 
                 <br />
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter Email"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter Email Here"></asp:TextBox>
 
             </div>
             <div class="form-group">
