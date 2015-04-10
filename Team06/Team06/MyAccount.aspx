@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <nav class="navbar navbar-primary">
+        <nav class="navbar navbar-primary">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -37,30 +37,32 @@
                 <asp:Button ID="btnModify" runat="server" Text="Modify My Account" CssClass="btn btn-primary" />
                 <br />
                 <br />
-                <asp:Panel ID="pnlModify" runat="server">
+                <asp:Panel ID="pnlModify" runat="server" Visible="False">
                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" Enabled="true" />
-                    <asp:Button ID="btnAbort" runat="server" Text="Abort" CssClass="btn btn-primary" Enabled="true" />
-                    <asp:Button ID="btnCancle" runat="server" Text="Cancel" CssClass="btn btn-primary" Enabled="true" />
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" Enabled="true" />
                 </asp:Panel>
+                <br />
+                <br />
+                <asp:Label ID="lblError" runat="server"></asp:Label>
             </div>
             <div class="col-xs-18 col-md-9">
                 <div id="login" class="form-horizontal">
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Lastname</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtLastname" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtLastname" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Firstname</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtFirstname" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtFirstname" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2" style="text-align: right">Username</label>
+                        <label class="col-sm-2" style="text-align: right">Email</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
@@ -72,19 +74,19 @@
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Phone</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" Width="350px" MaxLength="10" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Adresss</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">City</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="TxtCity" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
+                            <asp:TextBox ID="txtCity" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
@@ -96,19 +98,19 @@
                     <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Zip Code</label>
                         <div class="col-sm-6">
-                            <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control" Width="350px" AutoPostBack="True" MaxLength="5" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                       <div class="form-group">
                         <label class="col-sm-2" style="text-align: right">Credit Card</label>
                         <div class="col-sm-6">
-                            <a href="ChangePassword.aspx">Change password?</a>
+                            <a href="PaymentInfo.aspx">Change credit card?</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+      
         <%--<button type="submit" class="btn btn-info" id="btnCreateAccount">Create An Account Now</button>--%>
     </div>
 </asp:Content>

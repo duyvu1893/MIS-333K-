@@ -1,51 +1,4 @@
 ﻿Public Class ClassValidation
-    Implements IValidator
-    'Author: Tien Bui
-    'Assignment: ASP4
-    'Date: 02-26-2015
-    'Program Description: Different validation functions
-
-    'constructor
-    Sub New(Optional strMessage As String = "error")
-        ErrorMessage = strMessage
-        IsValid = False
-    End Sub
-
-    'properties and functions implement from IValidator
-    Public Property ErrorMessage As String Implements IValidator.ErrorMessage
-    Public Property IsValid As Boolean Implements IValidator.IsValid
-    Public Sub Validate() Implements IValidator.Validate
-        'no action required
-    End Sub
-
-    Public Sub AddError(message As String)
-        ' purpose: create a new error message displayed by ValidationSummary
-        ' inputs: string error
-        ' outputs: nothing
-        ' author: Tien Bui
-        ' date: 03-06-2015
-
-        ' add error to page validation
-        Dim pgCurrentPage As Page = HttpContext.Current.Handler
-        pgCurrentPage.Validators.Add(New ClassValidation(message))
-    End Sub
-
-    'Public Function CheckNotBlankUsernamePasswordFields(strUsername As String, strPassword As String) As Boolean
-    '    ' purpose: check if customer put in either blank username or blank password
-    '    ' inputs: username string and password string
-    '    ' outputs: true if both are filled/false if either is blank
-    '    ' author: Tien Bui
-    '    ' date: 02-06-2015
-
-    '    ' check if either string is blank
-    '    If strUsername = "" Or strPassword = "" Then
-    '        ' if either blank, return false
-    '        Return False
-    '    Else
-    '        ' if both not blank return true
-    '        Return True
-    '    End If
-    'End Function
 
     Public Function CheckAllDigits(strIn As String, Optional intLength As Integer = 0) As Boolean
         ' purpose: check if a string of specific length, and is all numbers
@@ -76,6 +29,66 @@
         ' if code gets to this point, length and all digits requirement all met, return true
         Return True
 
+    End Function
+
+    Public Function CheckCreditCardType(strIn As String) As String
+        'check if length is 15 or 16
+        If strIn.Length < 15 Or strIn.Length > 16 Then
+            Return "invalid"
+        End If
+
+        'check if all digits
+        If CheckAllDigits(strIn) = False Then
+            Return "invalid"
+        End If
+
+        'strIn is all 15 or 16 digits, if 15 digits then Amex
+        If strIn.Length = 15 Then
+            Return "amex"
+        Else
+            'if 16 digits
+            If strIn.Substring(0, 1) = "4" Then
+                'if starts with 4 then Visa
+                Return "visa"
+            End If
+
+            If strIn.Substring(0, 1) = "6" Then
+                'if starts with 6 then Discover
+                Return "discover"
+            End If
+
+            If strIn.Substring(0, 2) = "54" Then
+                'if starts with 54 then Master
+                Return "master"
+            End If
+
+            'if all fails, invalid card
+            Return "invalid"
+        End If
+    End Function
+
+    Public Function CheckPhone(strIn As String) As Boolean
+        'check if all digits of length 10
+        If CheckAllDigits(strIn, 10) = False Then
+            'return false
+            Return False
+        End If
+
+        'else
+        Return True
+    End Function
+
+    Public Function CheckEmail(strIn As String) As Boolean
+        'define regex pattern n__@n__.nn__
+        Const PATTERN As String = "^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w{2,}$"
+
+        'if email does not match pattern, return false
+        If Regex.IsMatch(strIn, PATTERN) = False Then
+            Return False
+        End If
+
+        'otherwise, return true
+        Return True
     End Function
 
     'Public Function CheckAllLetters(strIn As String, Optional intLength As Integer = 0, Optional bolCaseSensitive As Boolean = False) As Boolean

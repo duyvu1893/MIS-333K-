@@ -41,22 +41,22 @@ Partial Public Class MyAccount
     Protected WithEvents btnSave As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnAbort control.
+    '''btnCancel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnAbort As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnCancle control.
+    '''lblError control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCancle As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''txtLastname control.
@@ -104,13 +104,13 @@ Partial Public Class MyAccount
     Protected WithEvents txtAddress As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TxtCity control.
+    '''txtCity control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtCity As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCity As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''txtState control.
