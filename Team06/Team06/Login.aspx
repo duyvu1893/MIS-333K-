@@ -20,6 +20,7 @@
                     <ul class="nav nav-tabs navbar-nav navbar-right">
                         <li class="active"><a href="MyAccount.aspx">Portfolio</a></li>
                         <li><a href="ChangePassword.aspx">Change Password</a></li>
+                        <li><a href="PaymentInfo.aspx">Payment Info</a></li>
                         <li><a href="MyMusic.aspx">My Music</a></li>
                         <li><a href="OrderHistory.aspx">Order History</a></li>
                     </ul>

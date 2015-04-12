@@ -6,6 +6,32 @@
 
 
     <div class="container">
+        <nav class="navbar navbar-primary">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-tabs navbar-nav navbar-right">
+                        <li><a href="MyAccount.aspx">Portfolio</a></li>
+                        <li><a href="ChangePassword.aspx">Change Password</a></li>
+                        <li class="active"><a href="PaymentInfo.aspx">Payment Info</a></li>
+                        <li><a href="MyMusic.aspx">My Music</a></li>
+                        <li><a href="OrderHistory.aspx">Order History</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
         <div class="page-header">
             <h1>Payment Info<small> Edit Payment Information</small></h1>
         </div>
@@ -16,7 +42,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading" style="cursor: pointer;" role="tab" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
                             <div class="col-xs-6">
-                                <asp:Label ID="lblCreditCardEnding1" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="lblCreditCardEnding1" runat="server" Text="Credit Card 1"></asp:Label>
                             </div>
                             <div class="col-xs-6">
                                 <asp:Label ID="lblCreditCardExpires1" runat="server" Text=""></asp:Label>
