@@ -18,8 +18,8 @@
         Dim dblPhone As Double
         Dim strResult As String
 
-        'if strIn is not 10 digits, which in this database is only Null, return blank
-        If valid.CheckAllDigits(strIn, 10) = False Then
+        'check phone number
+        If valid.CheckPhone(strIn) = False Then
             Return ""
         End If
 
@@ -27,6 +27,34 @@
         dblPhone = Convert.ToDouble(strIn)
         'convert double back to string in phone number format
         strResult = dblPhone.ToString("(###) ###-####")
+        'return string
+        Return strResult
+    End Function
+
+    Public Function FormatCreditCard(strIn As String) As String
+        ' purpose: to return a string in phone number format
+        ' inputs: string of 10 phone number digits
+        ' outputs: string of formatted phone number
+        ' author: Tien Bui
+        ' date: 02-06-2015
+
+        'declare variables
+        Dim strResult As String
+
+        'check credit card
+        If valid.CheckCreditCardType(strIn) = "invalid" Then
+            'if invalid then return blank
+            Return ""
+        End If
+
+        'if amex then format for amex
+        If valid.CheckCreditCardType(strIn) = "amex" Then
+            strResult = "xxxx-xxxxxx-x" & strIn.Substring(strIn.Length - 4, 4)
+        Else
+            'else format for other cards
+            strResult = "xxxx-xxxx-xxxx-" & strIn.Substring(strIn.Length - 4, 4)
+        End If
+
         'return string
         Return strResult
     End Function

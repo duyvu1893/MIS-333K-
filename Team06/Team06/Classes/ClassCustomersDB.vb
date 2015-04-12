@@ -20,8 +20,6 @@ Public Class ClassCustomersDB
     Dim maryParamNames As New ArrayList
     Dim maryParamValues As New ArrayList
 
-    Dim valid As New ClassValidation
-
     ' define a public read only property for the outside world to access the dataset filled by this class
     Public ReadOnly Property CustDataset() As DataSet
         Get
@@ -84,6 +82,49 @@ Public Class ClassCustomersDB
 
     End Sub
 
+    Protected Sub UseSPNonQuery(strUSPName As String, aryParamNames As ArrayList, aryParamValues As ArrayList)
+        'Purpose: Run any stored procedure with any number of parameters
+        'Arguments: Stored procedure name, tblName, dataset name, dataview name, arraylist of parameter names, and array list of parameter values\
+        'Returns: Nothing
+        'Author: Xiaoru Chen
+        'Date: 3/22/2015
+
+        'Create instances of the connection and command object
+        Dim objConnection As New SqlConnection(mstrConnection)
+
+        'Tell SQL server the name of the stored procedure
+        Dim objCommand As New SqlDataAdapter(strUSPName, objConnection)
+
+        Try
+            'set the command type to stored procedure
+            objCommand.SelectCommand.CommandType = CommandType.StoredProcedure
+
+            'Add Parameters to stored procedure
+            Dim index As Integer = 0
+            For Each paramName As String In aryParamNames
+                objCommand.SelectCommand.Parameters.Add(New SqlParameter(CStr(aryParamNames(index)), CStr(aryParamValues(index))))
+                index = index + 1
+            Next
+
+            'open the connection and run insert/update query
+            objCommand.SelectCommand.Connection = objConnection
+            objConnection.Open()
+            objCommand.SelectCommand.ExecuteNonQuery()
+            objConnection.Close()
+
+            'print out each element of out arraylists if error occured
+        Catch ex As Exception
+            Dim strError As String = ""
+            Dim index As Integer = 0
+            For Each paramName As String In aryParamNames
+                strError = strError & "ParamName: " & CStr(aryParamNames(index))
+                strError = strError & "ParamValue: " & CStr(aryParamValues(index))
+            Next
+            Throw New Exception(strError & "error message is " & ex.Message)
+        End Try
+
+    End Sub
+
     Public Sub GetAllCustomers()
         ' purpose: to return all customer records
         ' inputs: none
@@ -95,7 +136,7 @@ Public Class ClassCustomersDB
         maryParamValues.Clear()
 
         'run usp to get all customers
-        UseSP("usp_customers_get_all", mDatasetCustomer, mMyView, "tblCustomer", maryParamNames, maryParamValues)
+        UseSP("usp_customers_get_all", mDatasetCustomer, mMyView, "tblCustomers", maryParamNames, maryParamValues)
     End Sub
 
     Public Sub GetCustomerWithEmail(strIn As String)
@@ -110,12 +151,12 @@ Public Class ClassCustomersDB
         maryParamValues.Clear()
 
         'set array value
-        maryParamNames.Add("@email")
+        maryParamNames.Add("email")
         maryParamValues.Add(strIn)
 
         ' to get one Employee using sp
         'RunSPwithOneParam(, "email", strIn)
-        UseSP("usp_customers_get_customers_by_email", mDatasetCustomer, mMyView, "tblCustomer", maryParamNames, maryParamValues)
+        UseSP("usp_customers_get_customers_by_email", mDatasetCustomer, mMyView, "tblCustomers", maryParamNames, maryParamValues)
     End Sub
 
     Public Sub GetCustomerWithID(intID As Integer)
@@ -163,6 +204,114 @@ Public Class ClassCustomersDB
         'if pass all test, return true
         Return True
 
+    End Function
+
+    Public Function CheckCustomerLoginWithID(intID As Integer, strPassword As String) As Boolean
+        ' purpose: check if ID and password are valid
+        ' inputs: EmpID string and Password string
+        ' outputs: true/false
+        ' author: Tien Bui
+        ' date: 02-06-2015
+
+        'get this one Employee with ID
+        GetCustomerWithID(intID)
+
+        'check number of record in Employee dataset
+        If mDatasetCustomer.Tables("tblCustomers").Rows.Count = 0 Then
+            ' if no record, return false
+            Return False
+        End If
+
+        'check password
+        If mDatasetCustomer.Tables("tblCustomers").Rows(0).Item("Password").ToString <> strPassword Then
+            'if not match, return false
+            Return False
+        End If
+
+        'if pass all test, return true
+        Return True
+
+    End Function
+
+    Public Sub UpdateCustomer(strEmail As String, strLastName As String, strFirstName As String, strAddress As String, strZip As String, strPhone As String, intAccount As Integer)
+        'clear arrays
+        maryParamNames.Clear()
+        maryParamValues.Clear()
+
+        'set array value
+        maryParamNames.Add("email")
+        maryParamValues.Add(strEmail)
+        maryParamNames.Add("lastname")
+        maryParamValues.Add(strLastName)
+        maryParamNames.Add("firstname")
+        maryParamValues.Add(strFirstName)
+        maryParamNames.Add("address")
+        maryParamValues.Add(strAddress)
+        maryParamNames.Add("zip")
+        maryParamValues.Add(strZip)
+        maryParamNames.Add("phone")
+        maryParamValues.Add(strPhone)
+        maryParamNames.Add("account")
+        maryParamValues.Add(intAccount)
+
+        UseSPNonQuery("usp_customers_update", maryParamNames, maryParamValues)
+    End Sub
+
+    Public Sub UpdatePassword(strPassword As String, intAccount As Integer)
+        'clear arrays
+        maryParamNames.Clear()
+        maryParamValues.Clear()
+
+        'set array value
+        maryParamNames.Add("password")
+        maryParamValues.Add(strPassword)
+        maryParamNames.Add("account")
+        maryParamValues.Add(intAccount)
+
+        UseSPNonQuery("usp_customers_update_password", maryParamNames, maryParamValues)
+    End Sub
+
+    Public Sub GetCityStateByZip(strIn As String)
+        ' purpose: get records of one EmpID
+        ' inputs: EmpID string
+        ' outputs: none directly, but it opens and fills the dataset with 1 or 0 record in tblEmployee
+        ' author: Tien Bui
+        ' date: 02-06-2015
+
+        'declare dummy view
+        Dim TempView As New DataView
+
+        'clear arrays
+        maryParamNames.Clear()
+        maryParamValues.Clear()
+
+        'set array value
+        maryParamNames.Add("ZipID")
+        maryParamValues.Add(strIn)
+
+        ' to get one Employee using sp
+        UseSP("usp_zip_get_city_state", mDatasetCustomer, TempView, "tblZip", maryParamNames, maryParamValues)
+    End Sub
+
+    Public Function CheckZip(strIn As String) As Boolean
+        'define class
+        Dim valid As New ClassValidation
+
+        'check if zip is all digits of length 5
+        If valid.CheckAllDigits(strIn, 5) = False Then
+            'return false
+            Return False
+        End If
+
+        'if 5 digits, check if valid zip
+        GetCityStateByZip(strIn)
+        If mDatasetCustomer.Tables("tblZip").Rows.Count = 0 Then
+            'if there is no row from the query, return false
+            Return False
+        End If
+
+        'otherwise return true
+        Return True
     End Function
 
     'Public Sub Sort(strValue As String)
