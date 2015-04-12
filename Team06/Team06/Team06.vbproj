@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\LM_logo.png" />
     <Content Include="PaymentInfo.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Style\bootstrap.min.css" />

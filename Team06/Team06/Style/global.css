@@ -1,7 +1,9 @@
 ﻿ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
 }
-
+body {
+    background-color: black;
+}
 
 /*.navbar-custom {
 color:  #BF5700  ;

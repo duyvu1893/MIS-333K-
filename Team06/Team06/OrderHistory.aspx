@@ -16,7 +16,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-pills navbar-nav navbar-right">
+                    <ul class="nav nav-tabs navbar-nav navbar-right">
                         <li><a href="MyAccount.aspx">Portfolio</a></li>
                         <li><a href="ChangePassword.aspx">Change Password</a></li>
                         <li><a href="MyMusic.aspx">My Music</a></li>
