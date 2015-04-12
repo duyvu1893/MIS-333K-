@@ -11,43 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ChangePassword
+Partial Public Class Login
 
     '''<summary>
-    '''btnSavePassword control.
+    '''txtEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnSavePassword As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''pnlConfirmChange control.
+    '''txtPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents pnlConfirmChange As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnConfirm control.
+    '''btnLogin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnConfirm As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btnCancel control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblError control.
@@ -59,29 +50,11 @@ Partial Public Class ChangePassword
     Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtCurrentPassword control.
+    '''btnCreateCustomer control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtCurrentPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''txtNewPassword control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''txtPasswordAgain control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtPasswordAgain As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnCreateCustomer As Global.System.Web.UI.WebControls.Button
 End Class

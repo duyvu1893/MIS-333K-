@@ -11,77 +11,68 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ChangePassword
+Partial Public Class MyMusic
 
     '''<summary>
-    '''btnSavePassword control.
+    '''txtSearchCriteria control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnSavePassword As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtSearchCriteria As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''pnlConfirmChange control.
+    '''DropDownList1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents pnlConfirmChange As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''btnConfirm control.
+    '''btnFilter control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnConfirm As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnFilter As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnCancel control.
+    '''btnClear control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnClear As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lblError control.
+    '''RadioButtonList1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
-    '''txtCurrentPassword control.
+    '''DropDownList2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtCurrentPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''txtNewPassword control.
+    '''gvCustomers control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''txtPasswordAgain control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtPasswordAgain As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents gvCustomers As Global.System.Web.UI.WebControls.GridView
 End Class

@@ -199,9 +199,9 @@
     <Compile Include="Classes\ClassCustomersDB.vb" />
     <Compile Include="Classes\ClassEmployeeDB.vb" />
     <Compile Include="Classes\ClassFormat.vb" />
-    <Compile Include="Classes\ClassFormValidation.vb" />
     <Compile Include="Classes\ClassValidation.vb" />
     <Compile Include="Classes\ClassSongDB.vb" />
+    <Compile Include="Classes\ClassFormValidation.vb" />
     <Compile Include="Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>

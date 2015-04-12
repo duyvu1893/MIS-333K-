@@ -11,77 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ChangePassword
+Partial Public Class LonghornMusic
 
     '''<summary>
-    '''btnSavePassword control.
+    '''head control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnSavePassword As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
-    '''pnlConfirmChange control.
+    '''form1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents pnlConfirmChange As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''btnConfirm control.
+    '''lblCartCount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnConfirm As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblCartCount As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''btnCancel control.
+    '''lblMyAccount control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblMyAccount As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblError control.
+    '''pnlBeforeLogin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents pnlBeforeLogin As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''txtCurrentPassword control.
+    '''pnlLoggedinCustomer control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtCurrentPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents pnlLoggedinCustomer As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''txtNewPassword control.
+    '''lnkLogout control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lnkLogout As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''txtPasswordAgain control.
+    '''ContentPlaceHolder1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtPasswordAgain As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 End Class

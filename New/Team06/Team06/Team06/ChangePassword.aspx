@@ -4,18 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <nav class="navbar navbar-primary">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-<<<<<<< HEAD
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav nav-tabs navbar-nav navbar-right">
@@ -27,21 +26,9 @@
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
-=======
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav nav-pills navbar-nav navbar-right">
-                    <li><a href="MyAccount.aspx">Portfolio</a></li>
-                    <li class="active"><a href="ChangePassword.aspx">Change Password</a></li>
-                    <li><a href="MyMusic.aspx">My Music</a></li>
-                    <li><a href="OrderHistory.aspx">Order History</a></li>
-                </ul>
->>>>>>> ffbded11dab11c65cdfd6175c8211b847145e251
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+            <!-- /.container-fluid -->
+        </nav>
     <div class="container">
         <div class="page-header">
             <h1>Change Password<small> Here</small></h1>
